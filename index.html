@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyNU - Honours Study Platform</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+}
+
+.header{
+    background:linear-gradient(135deg,#061b3a,#0b3b78);
+    color:white;
+    padding:28px 20px 35px;
+    border-radius:0 0 30px 30px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo-nu{
+    width:72px;
+    height:72px;
+    margin:auto;
+    border:3px solid white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    font-weight:800;
+    letter-spacing:-2px;
+}
+
+.logo-name{
+    font-size:28px;
+    font-weight:800;
+    margin-top:9px;
+}
+
+.logo-sub{
+    font-size:11px;
+    letter-spacing:2px;
+    opacity:.8;
+    margin-top:5px;
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+.hero p{
+    font-size:14px;
+    opacity:.85;
+    line-height:1.6;
+}
+
+.search{
+    margin-top:22px;
+    background:white;
+    border-radius:15px;
+    padding:13px 16px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.search span{
+    font-size:20px;
+    margin-right:10px;
+}
+
+.search input{
+    border:0;
+    outline:0;
+    width:100%;
+    font-size:14px;
+}
+
+.container{
+    padding:22px 16px 90px;
+    max-width:700px;
+    margin:auto;
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:12px 0 14px;
+}
+
+.section-title h2{
+    font-size:19px;
+}
+
+.section-title a{
+    color:#1769d1;
+    font-size:12px;
+}
+
+.main-card{
+    background:linear-gradient(135deg,#ffffff,#edf5ff);
+    border-radius:20px;
+    padding:20px;
+    border:1px solid #e0e8f2;
+    box-shadow:0 8px 25px rgba(20,50,90,.08);
+    margin-bottom:25px;
+}
+
+.main-card .tag{
+    display:inline-block;
+    background:#dcecff;
+    color:#1257a5;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.main-card h3{
+    font-size:21px;
+    margin:13px 0 6px;
+}
+
+.main-card p{
+    color:#667085;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.start-btn{
+    display:inline-block;
+    margin-top:16px;
+    background:#1261c9;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.feature{
+    background:white;
+    border-radius:16px;
+    padding:18px 14px;
+    border:1px solid #e5eaf0;
+    box-shadow:0 5px 18px rgba(20,40,70,.05);
+}
+
+.feature .icon{
+    font-size:25px;
+    margin-bottom:9px;
+}
+
+.feature h3{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.feature p{
+    font-size:11px;
+    color:#667085;
+}
+
+.courses{
+    display:grid;
+    gap:11px;
+}
+
+.course{
+    background:white;
+    border:1px solid #e4e9ef;
+    border-radius:15px;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.course-icon{
+    width:44px;
+    height:44px;
+    border-radius:13px;
+    background:#eaf3ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+}
+
+.course h3{
+    font-size:14px;
+    margin-bottom:4px;
+}
+
+.course p{
+    font-size:11px;
+    color:#7a8494;
+}
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:white;
+    border-top:1px solid #e4e8ee;
+    display:flex;
+    justify-content:space-around;
+    padding:10px 5px 12px;
+    z-index:10;
+}
+
+.nav-item{
+    text-align:center;
+    font-size:10px;
+    color:#667085;
+}
+
+.nav-item div{
+    font-size:20px;
+    margin-bottom:3px;
+}
+
+.nav-active{
+    color:#1261c9;
+    font-weight:bold;
+}
+
+.footer{
+    text-align:center;
+    color:#8a94a4;
+    font-size:10px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <div class="logo-nu">NU</div>
+        <div class="logo-name">StudyNU</div>
+        <div class="logo-sub">HONOURS STUDY PLATFORM</div>
+    </div>
+
+    <div class="hero">
+        <h1>পড়ুন • বুঝুন • প্রস্তুতি নিন</h1>
+        <p>
+            National University Honours শিক্ষার্থীদের<br>
+            জন্য সহজ ও স্মার্ট Study Platform
+        </p>
+    </div>
+
+    <div class="search">
+        <span>🔎</span>
+        <input type="text" placeholder="Subject বা Topic খুঁজুন...">
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="section-title">
+        <h2>🎓 আপনার পড়াশোনা</h2>
+    </div>
+
+    <div class="main-card">
+        <span class="tag">HONOURS • 1ST YEAR</span>
+
+        <h3>Management</h3>
+
+        <p>
+            আপনার syllabus অনুযায়ী বই, অধ্যায়,
+            গুরুত্বপূর্ণ প্রশ্ন ও MCQ অনুশীলন করুন।
+        </p>
+
+        <a href="#" class="start-btn">শুরু করুন →</a>
+    </div>
+
+
+    <div class="section-title">
+        <h2>📚 Study Tools</h2>
+    </div>
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="icon">📖</div>
+            <h3>Study Materials</h3>
+            <p>সহজ ভাষায় অধ্যায়ভিত্তিক পড়া</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">⭐</div>
+            <h3>Important Questions</h3>
+            <p>পরীক্ষার জন্য গুরুত্বপূর্ণ প্রশ্ন</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">✅</div>
+            <h3>MCQ Practice</h3>
+            <p>নিজেকে পরীক্ষা করুন</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">📊</div>
+            <h3>My Progress</h3>
+            <p>নিজের পড়ার অগ্রগতি দেখুন</p>
+        </div>
+
+    </div>
+
+
+    <div class="section-title">
+        <h2>📚 Management 1st Year</h2>
+        <a href="#">সবগুলো</a>
+    </div>
+
+    <div class="courses">
+
+        <div class="course">
+            <div class="course-icon">📘</div>
+            <div>
+                <h3>Principles of Management</h3>
+                <p>Course Code: 212601</p>
+            </div>
+        </div>
+
+        <div class="course">
+            <div class="course-icon">🌐</div>
+            <div>
+                <h3>Business Environment & Sustainability</h3>
+                <p>Course Code: 212603</p>
+            </div>
+        </div>
+
+        <div class="course">
+            <div class="course-icon">💼</div>
+            <div>
+                <h3>Introduction to Business</h3>
+                <p>Course Code: 212605</p>
+            </div>
+        </div>
+
+        <div class="course">
+            <div class="course-icon">💬</div>
+            <div>
+                <h3>Business Communication</h3>
+                <p>Course Code: 212607</p>
+            </div>
+        </div>
+
+        <div class="course">
+            <div class="course-icon">🔢</div>
+            <div>
+                <h3>Business Mathematics</h3>
+                <p>Course Code: 212609</p>
+            </div>
+        </div>
+
+        <div class="course">
+            <div class="course-icon">📈</div>
+            <div>
+                <h3>Microeconomics</h3>
+                <p>Course Code: 212611</p>
+            </div>
+        </div>
+
+        <div class="course">
+            <div class="course-icon">🇧🇩</div>
+            <div>
+                <h3>History of Bangladesh</h3>
+                <p>Course Code: 219901</p>
+            </div>
+        </div>
+
+        <div class="course">
+            <div class="course-icon">💻</div>
+            <div>
+                <h3>Information & Communication Technology</h3>
+                <p>Course Code: 219903</p>
+            </div>
+        </div>
+
+        <div class="course">
+            <div class="course-icon">🖥️</div>
+            <div>
+                <h3>ICT Lab</h3>
+                <p>Course Code: 219904</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        StudyNU • Honours Study Platform<br>
+        Built for students, designed for better preparation.
+    </div>
+
+</main>
+
+
+<nav class="bottom-nav">
+
+    <div class="nav-item nav-active">
+        <div>🏠</div>
+        Home
+    </div>
+
+    <div class="nav-item">
+        <div>📚</div>
+        Study
+    </div>
+
+    <div class="nav-item">
+        <div>📝</div>
+        Test
+    </div>
+
+    <div class="nav-item">
+        <div>👤</div>
+        Profile
+    </div>
+
+</nav>
+
+</body>
+  </html>

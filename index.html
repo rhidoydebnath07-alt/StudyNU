@@ -4,67 +4,102 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>StudyNU - Honours Study Platform</title>
+<title>StudyNU — Honours Study Platform</title>
 
 <style>
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
+    font-family:Arial, "Noto Sans Bengali", sans-serif;
 }
 
 body{
-    font-family:Arial,"Noto Sans Bengali",sans-serif;
     background:#f4f7fb;
     color:#172033;
+    padding-bottom:90px;
 }
 
+.container{
+    width:100%;
+    max-width:1150px;
+    margin:auto;
+    padding:0 18px;
+}
+
+/* HEADER */
+
 .header{
-    background:linear-gradient(135deg,#061b3a,#0b3b78);
+    background:linear-gradient(135deg,#071a3a,#0b3d91,#1769e0);
     color:white;
-    padding:28px 20px 35px;
-    border-radius:0 0 30px 30px;
+    border-radius:0 0 32px 32px;
+    padding:22px 0 32px;
+    box-shadow:0 12px 35px rgba(10,55,130,.25);
+}
+
+.topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .logo{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.logo-nu{
-    width:72px;
-    height:72px;
-    margin:auto;
-    border:3px solid white;
-    border-radius:50%;
+    width:52px;
+    height:52px;
+    border-radius:17px;
+    background:white;
+    color:#0b4dbb;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:30px;
-    font-weight:800;
-    letter-spacing:-2px;
+    font-size:24px;
+    font-weight:900;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
 }
 
-.logo-name{
-    font-size:28px;
-    font-weight:800;
-    margin-top:9px;
+.brand-text h1{
+    font-size:22px;
+    letter-spacing:.3px;
 }
 
-.logo-sub{
-    font-size:11px;
-    letter-spacing:2px;
+.brand-text span{
+    font-size:10px;
     opacity:.8;
-    margin-top:5px;
+    letter-spacing:1.4px;
 }
+
+.profile{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:rgba(255,255,255,.16);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+/* HERO */
 
 .hero{
-    text-align:center;
+    margin-top:30px;
 }
 
-.hero h1{
-    font-size:25px;
-    margin-bottom:8px;
+.hero small{
+    opacity:.8;
+    font-size:13px;
+}
+
+.hero h2{
+    font-size:32px;
+    line-height:1.2;
+    margin:8px 0;
 }
 
 .hero p{
@@ -76,189 +111,367 @@ body{
 .search{
     margin-top:22px;
     background:white;
-    border-radius:15px;
-    padding:13px 16px;
+    border-radius:16px;
+    padding:5px;
     display:flex;
     align-items:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 .search span{
+    padding:0 12px;
     font-size:20px;
-    margin-right:10px;
 }
 
 .search input{
     border:0;
     outline:0;
     width:100%;
+    padding:13px 5px;
     font-size:14px;
 }
 
-.container{
-    padding:22px 16px 90px;
-    max-width:700px;
-    margin:auto;
+/* MAIN */
+
+.main{
+    margin-top:24px;
 }
 
-.section-title{
+/* FEATURE CARD */
+
+.feature{
+    background:linear-gradient(135deg,#ffffff,#edf5ff);
+    border:1px solid #dce9fa;
+    border-radius:24px;
+    padding:22px;
+    box-shadow:0 10px 30px rgba(20,60,120,.08);
+    position:relative;
+    overflow:hidden;
+}
+
+.feature:after{
+    content:"";
+    position:absolute;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    background:#dcecff;
+    right:-70px;
+    top:-70px;
+}
+
+.feature-top{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    margin:12px 0 14px;
+    position:relative;
+    z-index:2;
 }
 
-.section-title h2{
-    font-size:19px;
-}
-
-.section-title a{
-    color:#1769d1;
-    font-size:12px;
-}
-
-.main-card{
-    background:linear-gradient(135deg,#ffffff,#edf5ff);
-    border-radius:20px;
-    padding:20px;
-    border:1px solid #e0e8f2;
-    box-shadow:0 8px 25px rgba(20,50,90,.08);
-    margin-bottom:25px;
-}
-
-.main-card .tag{
-    display:inline-block;
-    background:#dcecff;
-    color:#1257a5;
-    padding:6px 10px;
+.badge{
+    background:#e7f0ff;
+    color:#0d5bd8;
+    padding:7px 11px;
     border-radius:20px;
     font-size:11px;
     font-weight:bold;
-}
-
-.main-card h3{
-    font-size:21px;
-    margin:13px 0 6px;
-}
-
-.main-card p{
-    color:#667085;
-    font-size:13px;
-    line-height:1.5;
-}
-
-.start-btn{
-    display:inline-block;
-    margin-top:16px;
-    background:#1261c9;
-    color:white;
-    text-decoration:none;
-    padding:12px 18px;
-    border-radius:12px;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    margin-bottom:25px;
-}
-
-.feature{
-    background:white;
-    border-radius:16px;
-    padding:18px 14px;
-    border:1px solid #e5eaf0;
-    box-shadow:0 5px 18px rgba(20,40,70,.05);
-}
-
-.feature .icon{
-    font-size:25px;
-    margin-bottom:9px;
 }
 
 .feature h3{
-    font-size:14px;
-    margin-bottom:5px;
+    margin-top:15px;
+    font-size:21px;
 }
 
 .feature p{
+    margin-top:7px;
+    color:#657084;
+    font-size:13px;
+}
+
+.progress{
+    margin-top:18px;
+}
+
+.progress-head{
+    display:flex;
+    justify-content:space-between;
     font-size:11px;
     color:#667085;
 }
 
-.courses{
-    display:grid;
-    gap:11px;
+.progress-bar{
+    height:8px;
+    background:#e5ebf4;
+    border-radius:20px;
+    margin-top:8px;
+    overflow:hidden;
 }
 
-.course{
-    background:white;
-    border:1px solid #e4e9ef;
-    border-radius:15px;
-    padding:15px;
+.progress-fill{
+    width:18%;
+    height:100%;
+    background:linear-gradient(90deg,#0d5bd8,#35a4ff);
+    border-radius:20px;
+}
+
+.continue{
+    margin-top:20px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#0d5bd8;
+    color:white;
+    border:0;
+    padding:12px 18px;
+    border-radius:13px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* QUICK TOOLS */
+
+.section-title{
+    margin:30px 2px 15px;
     display:flex;
     align-items:center;
-    gap:13px;
+    justify-content:space-between;
 }
 
-.course-icon{
-    width:44px;
-    height:44px;
-    border-radius:13px;
-    background:#eaf3ff;
+.section-title h3{
+    font-size:19px;
+}
+
+.section-title span{
+    color:#0d5bd8;
+    font-size:12px;
+}
+
+.tools{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.tool{
+    background:white;
+    border:1px solid #e7edf5;
+    border-radius:18px;
+    padding:17px 10px;
+    text-align:center;
+    box-shadow:0 7px 20px rgba(20,50,100,.05);
+    cursor:pointer;
+    transition:.25s;
+}
+
+.tool:hover{
+    transform:translateY(-3px);
+}
+
+.tool-icon{
+    width:45px;
+    height:45px;
+    margin:auto;
+    border-radius:14px;
     display:flex;
     align-items:center;
     justify-content:center;
+    background:#edf5ff;
     font-size:21px;
 }
 
-.course h3{
-    font-size:14px;
-    margin-bottom:4px;
+.tool h4{
+    margin-top:10px;
+    font-size:12px;
 }
 
-.course p{
-    font-size:11px;
-    color:#7a8494;
+.tool p{
+    margin-top:4px;
+    font-size:9px;
+    color:#8892a3;
 }
+
+/* SUBJECTS */
+
+.subjects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+
+.subject{
+    background:white;
+    border-radius:20px;
+    padding:17px;
+    border:1px solid #e7edf5;
+    box-shadow:0 7px 22px rgba(20,50,100,.05);
+    transition:.25s;
+    cursor:pointer;
+}
+
+.subject:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 28px rgba(20,50,100,.1);
+}
+
+.subject-code{
+    font-size:10px;
+    color:#0d5bd8;
+    font-weight:bold;
+}
+
+.subject h4{
+    margin-top:8px;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.subject-bottom{
+    margin-top:14px;
+    display:flex;
+    justify-content:space-between;
+    color:#8a94a6;
+    font-size:10px;
+}
+
+/* MCQ BANNER */
+
+.mcq{
+    margin-top:30px;
+    border-radius:24px;
+    padding:25px;
+    color:white;
+    background:linear-gradient(135deg,#101d3c,#123d88,#0d72df);
+    box-shadow:0 15px 35px rgba(10,55,130,.2);
+    position:relative;
+    overflow:hidden;
+}
+
+.mcq:after{
+    content:"?";
+    position:absolute;
+    right:25px;
+    top:0;
+    font-size:120px;
+    font-weight:900;
+    opacity:.08;
+}
+
+.mcq small{
+    opacity:.7;
+}
+
+.mcq h3{
+    font-size:23px;
+    margin-top:7px;
+}
+
+.mcq p{
+    margin-top:7px;
+    font-size:12px;
+    opacity:.8;
+    max-width:500px;
+}
+
+.mcq button{
+    margin-top:17px;
+    border:0;
+    background:white;
+    color:#0d5bd8;
+    padding:11px 18px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+/* BOTTOM NAV */
 
 .bottom-nav{
     position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    background:white;
-    border-top:1px solid #e4e8ee;
-    display:flex;
-    justify-content:space-around;
-    padding:10px 5px 12px;
-    z-index:10;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:12px;
+    width:calc(100% - 24px);
+    max-width:520px;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(18px);
+    border:1px solid #e1e8f2;
+    border-radius:22px;
+    padding:10px 8px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    box-shadow:0 15px 40px rgba(0,0,0,.13);
+    z-index:20;
 }
 
 .nav-item{
     text-align:center;
+    color:#8791a2;
     font-size:10px;
-    color:#667085;
+    cursor:pointer;
 }
 
 .nav-item div{
     font-size:20px;
-    margin-bottom:3px;
+    margin-bottom:4px;
 }
 
-.nav-active{
-    color:#1261c9;
+.nav-item.active{
+    color:#0d5bd8;
     font-weight:bold;
 }
 
-.footer{
-    text-align:center;
-    color:#8a94a4;
-    font-size:10px;
-    margin-top:30px;
+/* DESKTOP */
+
+@media(min-width:800px){
+    .hero h2{
+        font-size:42px;
+    }
+
+    .hero{
+        max-width:700px;
+    }
+
+    .tools{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .subjects{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+    .container{
+        padding:0 14px;
+    }
+
+    .header{
+        padding-bottom:27px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .tools{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .subjects{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .subject{
+        padding:14px;
+    }
+
+    .subject h4{
+        font-size:12px;
+    }
+
+    .mcq{
+        padding:21px;
+    }
 }
 </style>
 </head>
@@ -267,193 +480,257 @@ body{
 
 <header class="header">
 
-    <div class="logo">
-        <div class="logo-nu">NU</div>
-        <div class="logo-name">StudyNU</div>
-        <div class="logo-sub">HONOURS STUDY PLATFORM</div>
-    </div>
+<div class="container">
 
-    <div class="hero">
-        <h1>পড়ুন • বুঝুন • প্রস্তুতি নিন</h1>
-        <p>
-            National University Honours শিক্ষার্থীদের<br>
-            জন্য সহজ ও স্মার্ট Study Platform
-        </p>
-    </div>
+<div class="topbar">
 
-    <div class="search">
-        <span>🔎</span>
-        <input type="text" placeholder="Subject বা Topic খুঁজুন...">
-    </div>
+<div class="brand">
+<div class="logo">NU</div>
+
+<div class="brand-text">
+<h1>StudyNU</h1>
+<span>HONOURS STUDY PLATFORM</span>
+</div>
+</div>
+
+<div class="profile">👤</div>
+
+</div>
+
+<div class="hero">
+
+<small>National University • Honours</small>
+
+<h2>পড়ুন • বুঝুন •<br>প্রস্তুতি নিন</h2>
+
+<p>
+আপনার Honours পড়াশোনাকে আরও সহজ, স্মার্ট ও organised করার জন্য StudyNU।
+</p>
+
+<div class="search">
+<span>⌕</span>
+<input type="text" placeholder="Subject, chapter বা topic খুঁজুন...">
+</div>
+
+</div>
+
+</div>
 
 </header>
 
 
-<main class="container">
-
-    <div class="section-title">
-        <h2>🎓 আপনার পড়াশোনা</h2>
-    </div>
-
-    <div class="main-card">
-        <span class="tag">HONOURS • 1ST YEAR</span>
-
-        <h3>Management</h3>
-
-        <p>
-            আপনার syllabus অনুযায়ী বই, অধ্যায়,
-            গুরুত্বপূর্ণ প্রশ্ন ও MCQ অনুশীলন করুন।
-        </p>
-
-        <a href="#" class="start-btn">শুরু করুন →</a>
-    </div>
+<main class="main container">
 
 
-    <div class="section-title">
-        <h2>📚 Study Tools</h2>
-    </div>
+<!-- CURRENT STUDY -->
 
-    <div class="features">
+<div class="feature">
 
-        <div class="feature">
-            <div class="icon">📖</div>
-            <h3>Study Materials</h3>
-            <p>সহজ ভাষায় অধ্যায়ভিত্তিক পড়া</p>
-        </div>
+<div class="feature-top">
 
-        <div class="feature">
-            <div class="icon">⭐</div>
-            <h3>Important Questions</h3>
-            <p>পরীক্ষার জন্য গুরুত্বপূর্ণ প্রশ্ন</p>
-        </div>
+<div>
+<div class="badge">CURRENT STUDY</div>
+<h3>Management — 1st Year</h3>
+<p>আপনার প্রথম বর্ষের পড়াশোনা এখান থেকে চালিয়ে যান।</p>
+</div>
 
-        <div class="feature">
-            <div class="icon">✅</div>
-            <h3>MCQ Practice</h3>
-            <p>নিজেকে পরীক্ষা করুন</p>
-        </div>
+</div>
 
-        <div class="feature">
-            <div class="icon">📊</div>
-            <h3>My Progress</h3>
-            <p>নিজের পড়ার অগ্রগতি দেখুন</p>
-        </div>
+<div class="progress">
 
-    </div>
+<div class="progress-head">
+<span>Study Progress</span>
+<span>18%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+</div>
+
+<button class="continue">
+Continue Study →
+</button>
+
+</div>
 
 
-    <div class="section-title">
-        <h2>📚 Management 1st Year</h2>
-        <a href="#">সবগুলো</a>
-    </div>
+<!-- TOOLS -->
 
-    <div class="courses">
+<div class="section-title">
+<h3>Study Tools</h3>
+<span>View all →</span>
+</div>
 
-        <div class="course">
-            <div class="course-icon">📘</div>
-            <div>
-                <h3>Principles of Management</h3>
-                <p>Course Code: 212601</p>
-            </div>
-        </div>
+<div class="tools">
 
-        <div class="course">
-            <div class="course-icon">🌐</div>
-            <div>
-                <h3>Business Environment & Sustainability</h3>
-                <p>Course Code: 212603</p>
-            </div>
-        </div>
+<div class="tool">
+<div class="tool-icon">📖</div>
+<h4>Study Materials</h4>
+<p>Read & Learn</p>
+</div>
 
-        <div class="course">
-            <div class="course-icon">💼</div>
-            <div>
-                <h3>Introduction to Business</h3>
-                <p>Course Code: 212605</p>
-            </div>
-        </div>
+<div class="tool">
+<div class="tool-icon">❓</div>
+<h4>Important Questions</h4>
+<p>Exam Focused</p>
+</div>
 
-        <div class="course">
-            <div class="course-icon">💬</div>
-            <div>
-                <h3>Business Communication</h3>
-                <p>Course Code: 212607</p>
-            </div>
-        </div>
+<div class="tool">
+<div class="tool-icon">📝</div>
+<h4>MCQ Practice</h4>
+<p>Test Yourself</p>
+</div>
 
-        <div class="course">
-            <div class="course-icon">🔢</div>
-            <div>
-                <h3>Business Mathematics</h3>
-                <p>Course Code: 212609</p>
-            </div>
-        </div>
+<div class="tool">
+<div class="tool-icon">📊</div>
+<h4>My Progress</h4>
+<p>Track Study</p>
+</div>
 
-        <div class="course">
-            <div class="course-icon">📈</div>
-            <div>
-                <h3>Microeconomics</h3>
-                <p>Course Code: 212611</p>
-            </div>
-        </div>
+</div>
 
-        <div class="course">
-            <div class="course-icon">🇧🇩</div>
-            <div>
-                <h3>History of Bangladesh</h3>
-                <p>Course Code: 219901</p>
-            </div>
-        </div>
 
-        <div class="course">
-            <div class="course-icon">💻</div>
-            <div>
-                <h3>Information & Communication Technology</h3>
-                <p>Course Code: 219903</p>
-            </div>
-        </div>
+<!-- SUBJECTS -->
 
-        <div class="course">
-            <div class="course-icon">🖥️</div>
-            <div>
-                <h3>ICT Lab</h3>
-                <p>Course Code: 219904</p>
-            </div>
-        </div>
+<div class="section-title">
+<h3>Management — 1st Year</h3>
+<span>9 Subjects</span>
+</div>
 
-    </div>
+<div class="subjects">
 
-    <div class="footer">
-        StudyNU • Honours Study Platform<br>
-        Built for students, designed for better preparation.
-    </div>
+<div class="subject">
+<span class="subject-code">212601</span>
+<h4>Principles of Management</h4>
+<div class="subject-bottom">
+<span>9 Units</span>
+<span>→</span>
+</div>
+</div>
+
+<div class="subject">
+<span class="subject-code">212603</span>
+<h4>Business Environment and Sustainability</h4>
+<div class="subject-bottom">
+<span>Study</span>
+<span>→</span>
+</div>
+</div>
+
+<div class="subject">
+<span class="subject-code">212605</span>
+<h4>Introduction to Business</h4>
+<div class="subject-bottom">
+<span>Study</span>
+<span>→</span>
+</div>
+</div>
+
+<div class="subject">
+<span class="subject-code">212607</span>
+<h4>Business Communication (In English)</h4>
+<div class="subject-bottom">
+<span>Study</span>
+<span>→</span>
+</div>
+</div>
+
+<div class="subject">
+<span class="subject-code">212609</span>
+<h4>Business Mathematics (In English)</h4>
+<div class="subject-bottom">
+<span>8 Units</span>
+<span>→</span>
+</div>
+</div>
+
+<div class="subject">
+<span class="subject-code">212611</span>
+<h4>Microeconomics</h4>
+<div class="subject-bottom">
+<span>12 Units</span>
+<span>→</span>
+</div>
+</div>
+
+<div class="subject">
+<span class="subject-code">219901</span>
+<h4>History of Bangladesh: Language, Culture and Identity</h4>
+<div class="subject-bottom">
+<span>Study</span>
+<span>→</span>
+</div>
+</div>
+
+<div class="subject">
+<span class="subject-code">219903</span>
+<h4>Information and Communication Technology</h4>
+<div class="subject-bottom">
+<span>9 Units</span>
+<span>→</span>
+</div>
+</div>
+
+<div class="subject">
+<span class="subject-code">219904</span>
+<h4>Lab: Information and Communication Technology</h4>
+<div class="subject-bottom">
+<span>Practical</span>
+<span>→</span>
+</div>
+</div>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="mcq">
+
+<small>EXAM PREPARATION</small>
+
+<h3>MCQ Practice</h3>
+
+<p>
+প্রতিটি subject ও topic থেকে practice করুন, নিজের score দেখুন এবং ভুল প্রশ্নগুলো আবার revise করুন।
+</p>
+
+<button>Start MCQ →</button>
+
+</div>
+
 
 </main>
 
 
+<!-- BOTTOM NAV -->
+
 <nav class="bottom-nav">
 
-    <div class="nav-item nav-active">
-        <div>🏠</div>
-        Home
-    </div>
+<div class="nav-item active">
+<div>⌂</div>
+Home
+</div>
 
-    <div class="nav-item">
-        <div>📚</div>
-        Study
-    </div>
+<div class="nav-item">
+<div>📚</div>
+Study
+</div>
 
-    <div class="nav-item">
-        <div>📝</div>
-        Test
-    </div>
+<div class="nav-item">
+<div>📝</div>
+Test
+</div>
 
-    <div class="nav-item">
-        <div>👤</div>
-        Profile
-    </div>
+<div class="nav-item">
+<div>👤</div>
+Profile
+</div>
 
 </nav>
 
+
 </body>
-  </html>
+    </html>

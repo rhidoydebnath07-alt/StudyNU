@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Communication - StudyNU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #2563EB;
+            --bg: #F8FAFC;
+            --card: #FFFFFF;
+            --text: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            padding-bottom: 80px;
+        }
+
+        .header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 16px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-btn {
+            color: #93C5FD;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #94A3B8;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        .syllabus-card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .syllabus-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .unit-card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .unit-info h3 {
+            font-size: 15px;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .unit-info p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .badge {
+            background: #EFF6FF;
+            color: var(--accent);
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .nav-item.active {
+            color: var(--accent);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html" class="back-btn">← হোমপেজ</a>
+        <h1>212607 Business Communication (In English)</h1>
+        <p>Management 1st Year • Study Materials & MCQs</p>
+    </div>
+
+    <div class="container">
+        <div class="syllabus-card">
+            <div class="syllabus-title">Study Resources</div>
+            
+            <div class="unit-card">
+                <div class="unit-info">
+                    <h3>Important Notes & Lecture Materials</h3>
+                    <p>Chapter-wise Notes • Summaries</p>
+                </div>
+                <span class="badge">Coming Soon</span>
+            </div>
+
+            <div class="unit-card">
+                <div class="unit-info">
+                    <h3>Practice MCQ</h3>
+                    <p>Model Tests • Self Assessment</p>
+                </div>
+                <span class="badge">Coming Soon</span>
+            </div>
+
+            <div class="unit-card">
+                <div class="unit-info">
+                    <h3>Important Questions</h3>
+                    <p>Previous Years & Suggestions</p>
+                </div>
+                <span class="badge">Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="#" class="nav-item active">Subjects</a>
+        <a href="#" class="nav-item">MCQ</a>
+        <a href="#" class="nav-item">Profile</a>
+    </div>
+
+</body>
+</html>
